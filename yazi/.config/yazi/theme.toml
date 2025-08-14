@@ -1,0 +1,139 @@
+[mgr]
+cwd = { fg = "#61AFEF" }
+
+hovered = { fg = "#FFC649" }
+preview_hovered = { underline = true }
+
+find_keyword = { fg = "#FFC649", italic = true }
+find_position = { fg = "#CCCCCC", bg = "#4A4A4A", italic = true }
+
+marker_selected = { fg = "#FFC649", bg = "#FFC649" }
+marker_copied = { fg = "#98C379", bg = "#98C379" }
+marker_cut = { fg = "#E06C75", bg = "#E06C75" }
+
+tab_active = { fg = "#2E2E2E", bg = "#FFC649" }
+tab_inactive = { fg = "#CCCCCC", bg = "#3E3E3E" }
+tab_width = 1
+
+border_symbol = "│"
+border_style = { fg = "#5A5A5A" }
+
+highlighting = [
+  { name = "*/", fg = "#FFC649", bold = true },
+  { name = "*", fg = "#CCCCCC" },
+]
+
+[status]
+separator_open = ""
+separator_close = ""
+separator_style = { fg = "#5A5A5A", bg = "#5A5A5A" }
+
+mode_normal = { fg = "#2E2E2E", bg = "#FFC649", bold = true }
+mode_select = { fg = "#2E2E2E", bg = "#98C379", bold = true }
+mode_unset = { fg = "#2E2E2E", bg = "#E06C75", bold = true }
+
+progress_label = { bold = true }
+progress_normal = { fg = "#FFC649", bg = "#3E3E3E" }
+progress_error = { fg = "#E06C75", bg = "#3E3E3E" }
+
+permissions_t = { fg = "#FFC649" }
+permissions_r = { fg = "#98C379" }
+permissions_w = { fg = "#E5C07B" }
+permissions_x = { fg = "#CCCCCC" }
+permissions_s = { fg = "#888888" }
+
+[select]
+border = { fg = "#FFC649" }
+active = { fg = "#FFC649" }
+inactive = { fg = "#CCCCCC" }
+
+[input]
+border = { fg = "#FFC649" }
+title = { fg = "#FFC649" }
+value = { fg = "#CCCCCC" }
+selected = { reversed = true }
+
+[completion]
+border = { fg = "#FFC649" }
+active = { fg = "#FFC649" }
+inactive = { fg = "#CCCCCC" }
+
+icon_prepend = " "
+icon_append = " "
+
+[tasks]
+border = { fg = "#FFC649" }
+title = { fg = "#FFC649" }
+hovered = { underline = true }
+
+[which]
+attrs = { fg = "#FFC649" }
+cand = { fg = "#CCCCCC" }
+desc = { fg = "#888888" }
+rest = { fg = "#666666" }
+separator = "  "
+
+[help]
+on = { fg = "#FFC649" }
+exec = { fg = "#CCCCCC" }
+desc = { fg = "#888888" }
+hovered = { bg = "#3E3E3E", bold = true }
+footer = { fg = "#888888", bg = "#2E2E2E" }
+
+[filetype]
+
+rules = [
+  { mime = "inode/directory", fg = "#4A4A4A" },
+
+  { name = "*", is = "link", fg = "#C678DD" },
+  { name = "*", is = "orphan", fg = "#E06C75" },
+
+  { mime = "image/*", fg = "#98C379" },
+  { mime = "video/*", fg = "#98C379" },
+  { mime = "audio/*", fg = "#98C379" },
+
+  { mime = "application/zip", fg = "#E5C07B" },
+  { mime = "application/gzip", fg = "#E5C07B" },
+  { mime = "application/x-tar", fg = "#E5C07B" },
+  { mime = "application/x-bzip*", fg = "#E5C07B" },
+  { mime = "application/x-7z-compressed", fg = "#E5C07B" },
+  { mime = "application/x-rar", fg = "#E5C07B" },
+
+  { mime = "text/*", fg = "#CCCCCC" },
+  { mime = "application/json", fg = "#FFC649" },
+  { mime = "*/xml", fg = "#E06C75" },
+  { mime = "*/javascript", fg = "#FFC649" },
+  { mime = "*/x-wine-extension-ini", fg = "#888888" },
+
+  { name = "*.md", fg = "#4A4A4A" },
+  { name = "*.py", fg = "#FFC649" },
+  { name = "*.js", fg = "#FFC649" },
+  { name = "*.ts", fg = "#4A4A4A" },
+  { name = "*.rs", fg = "#E06C75" },
+  { name = "*.go", fg = "#4A4A4A" },
+  { name = "*.cpp", fg = "#4A4A4A" },
+  { name = "*.c", fg = "#4A4A4A" },
+  { name = "*.h", fg = "#4A4A4A" },
+  { name = "*.css", fg = "#4A4A4A" },
+  { name = "*.html", fg = "#E06C75" },
+  { name = "*.vue", fg = "#98C379" },
+  { name = "*.php", fg = "#C678DD" },
+
+  { name = "*.toml", fg = "#FFC649" },
+  { name = "*.yaml", fg = "#FFC649" },
+  { name = "*.yml", fg = "#FFC649" },
+  { name = "*.json", fg = "#FFC649" },
+  { name = "*.ini", fg = "#888888" },
+  { name = "*.conf", fg = "#888888" },
+  { name = "*.config", fg = "#888888" },
+
+  { name = ".*", fg = "#666666" },
+  { name = "LICENSE*", fg = "#E5C07B" },
+  { name = "README*", fg = "#E5C07B" },
+  { name = "Makefile", fg = "#E06C75" },
+  { name = "Dockerfile", fg = "#4A4A4A" },
+
+  { name = "*", is = "exec", fg = "#98C379" },
+
+  { name = "*", fg = "#CCCCCC" },
+]

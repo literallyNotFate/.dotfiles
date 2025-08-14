@@ -1,0 +1,74 @@
+[general]
+live_config_reload = true
+
+
+[scrolling]
+history = 1000
+
+
+[env]
+TERM = "xterm-256color"
+
+
+[window]
+padding.x = 20
+padding.y = 10
+decorations = "Buttonless"
+decorations_theme_variant = "Dark"
+#opacity = 0.9
+
+
+[font]
+normal.family = "JetBrainsMonoNL Nerd Font"
+bold.family = "JetBrainsMonoNL Nerd Font"
+italic.family = "JetBrainsMonoNL Nerd Font"
+bold_italic.family = "JetBrainsMonoNL Nerd Font"
+size = 18.0
+builtin_box_drawing = false
+offset.x = 0
+offset.y = 1
+
+
+[colors.primary]
+background = '#101010'
+foreground = '#ffffff'
+
+
+[colors.cursor]
+text = '#101010'
+cursor = '#ffffff'
+
+
+[colors.selection]
+text = '#ffffff'
+background = '#343434'
+
+
+[colors.normal]
+black = '#101010'
+red = '#f5a191'
+green = '#90b99f'
+yellow = '#e6b99d'
+blue = '#aca1cf'
+magenta = '#e29eca'
+cyan = '#ea83a5'
+white = '#a0a0a0'
+
+
+[colors.bright]
+black = '#7e7e7e'
+red = '#ff8080'
+green = '#99ffe4'
+yellow = '#ffc799'
+blue = '#b9aeda'
+magenta = '#ecaad6'
+cyan = '#f591b2'
+white = '#ffffff'
+
+
+[selection]
+save_to_clipboard = true
+
+
+[keyboard]
+bindings = [{ key = "Return", mods = "Command", action = "ToggleFullscreen" }]

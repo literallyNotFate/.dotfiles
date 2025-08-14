@@ -1,0 +1,66 @@
+# Vesper theme for btop (Original Vesper nvim colors)
+# Place this file in ~/.config/btop/themes/vesper.theme
+
+# Main background and foreground
+theme[main_bg]="#101010"
+theme[main_fg]="#cccccc"
+
+# Title and borders
+theme[title]="#65737E"
+theme[hi_fg]="#65737E"
+theme[selected_bg]="#343434"
+theme[selected_fg]="#FFFFFF"
+theme[inactive_fg]="#65737E"
+
+# CPU colors (yellow dominant)
+theme[cpu_box]="#FFC799"
+theme[cpu_text]="#cccccc"
+theme[cpu_start]="#FFCFA8"
+theme[cpu_mid]="#FFC799"
+theme[cpu_end]="#FF8080"
+
+# Memory colors (yellow to orange gradient)
+theme[mem_box]="#FFC799"
+theme[mem_text]="#cccccc"
+theme[mem_start]="#FFCFA8"
+theme[mem_mid]="#FFC799"
+theme[mem_end]="#FF8080"
+
+# Network colors (muted gray)
+theme[net_box]="#65737E"
+theme[net_text]="#cccccc"
+theme[net_start]="#FFCFA8"
+theme[net_mid]="#FFC799"
+theme[net_end]="#FF8080"
+
+# Process colors (yellow dominant gradient)
+theme[proc_box]="#FFC799"
+theme[proc_text]="#cccccc"
+theme[proc_start]="#FFCFA8"
+theme[proc_mid]="#FFC799"
+theme[proc_end]="#FF8080"
+
+# Graph colors
+theme[graph_text]="#FFC799"
+theme[meter_bg]="#232323"
+theme[process_start]="#FFCFA8"
+theme[process_mid]="#FFC799"
+theme[process_end]="#FF8080"
+
+# Temperature colors (soft yellow gradient)
+theme[temp_start]="#65737E"
+theme[temp_mid]="#FFC799"
+theme[temp_end]="#FF8080"
+
+# Additional UI elements
+theme[div_line]="#505050"
+theme[temp_crit]="#FF8080"
+theme[temp_high]="#FFC799"
+theme[temp_mid]="#FFCFA8"
+theme[temp_low]="#65737E"
+
+# Additional elements using Vesper colors
+theme[cpu_start]="#99FFE4"
+theme[mem_start]="#99FFE4"
+theme[net_start]="#99FFE4"
+theme[temp_low]="#99FFE4"

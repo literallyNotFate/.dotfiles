@@ -16,7 +16,8 @@ alias g++="g++ -std=c++17"
 
 export PATH=/usr/local/Caskroom/sqlcl/24.3.0.285.0530/sqlcl/bin:"$PATH"
 
-
+export DOTNET_ROOT=$(brew --prefix)/opt/dotnet/libexec
+export PATH=$DOTNET_ROOT:$PATH
 
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"

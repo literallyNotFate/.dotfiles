@@ -95,6 +95,7 @@ format = ' [$symbol $version]($style) '
 [c]
 symbol = " "
 format = " [$symbol$version]($style) "
+style = "fg:#3776ab"
 
 [custom.cpp]
 detect_extensions = ['cpp', 'cc', 'hpp']
@@ -103,6 +104,7 @@ format = " [$symbol(v$output)]($style) "
 command = "clang++ --version | awk '/clang version/{print $4}'"
 disabled = false
 ignore_timeout = false
+style = "fg:#00599c"
 
 [rust]
 symbol = ""
@@ -112,14 +114,17 @@ format = ' [$symbol $version]($style) '
 symbol = ""
 format = ' [$symbol $version]($style) '
 detect_files = ["go.mod"]
+style = "fg:#00add8"
 
 [python]
 symbol = ""
 format = ' [$symbol $version]($style) '
+style = "fg:#3776ab"
 
 [zig]
 symbol = '↯'
 format = " [$symbol $version]($style) "
+style = "fg:#f7a41d"
 
 [cmake]
 symbol = "△"
@@ -135,6 +140,9 @@ symbol = '󰏗 '
 [lua]
 symbol = ' '
 
+[dotnet]
+format = ' [$symbol$version]($style) '
+style = "fg:#68217a"
 
 [time]
 disabled = true

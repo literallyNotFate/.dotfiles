@@ -1,8 +1,10 @@
+palette = "melange"
+
 command_timeout = 3600
 
 "$schema" = 'https://starship.rs/config-schema.json'
 
-add_newline = true
+add_newline = false
 
 format = """
  ➜\
@@ -16,38 +18,9 @@ $character
 """
 
 right_format = """$all"""
-palette = "vesper"
-
-[palettes.vesper]
-rosewater = "#d4a5a0"
-flamingo = "#e85a75"
-pink = "#d77394"
-mauve = "#b19cd9"
-red = "#ff6b7d"
-maroon = "#c97aa8"
-peach = "#ffb86c"
-yellow = "#f1fa8c"
-green = "#5af78e"
-teal = "#8be9fd"
-sky = "#74c7ec"
-sapphire = "#89b4fa"
-blue = "#8aa2d3"
-lavender = "#cba6f7"
-text = "#f8f8f2"
-subtext1 = "#e0e0e0"
-subtext0 = "#a0a0a0"
-overlay2 = "#6272a4"
-overlay1 = "#44475a"
-overlay0 = "#383a59"
-surface2 = "#282a36"
-surface1 = "#21222c"
-surface0 = "#191a21"
-base = "#101010"
-mantle = "#0a0a0a"
-crust = "#000000"
 
 [directory]
-style = "teal"
+style = "yellow"
 format = "[ $path ]($style)"
 #truncation_length = 4
 #truncation_symbol = "…/"
@@ -80,10 +53,10 @@ when = 'git rev-parse --is-inside-work-tree 2> /dev/null'
 format = "at $output"
 
 [git_branch]
-symbol = "[](black) "
+symbol = "[](base) "
 # format =  ' [$symbol$branch(:$remote_branch)]($style)[]'
-style = "fg:lavender bg:black"
-format = '  on[$symbol$branch]($style)[](black)'
+style = "fg:mauve bg:base"
+format = '  on[$symbol$branch]($style)[](base)'
 
 [git_status]
 format = ' [($all_status$ahead_behind )]($style)'
@@ -91,11 +64,12 @@ format = ' [($all_status$ahead_behind )]($style)'
 [nodejs]
 symbol = ""
 format = ' [$symbol $version]($style) '
+style = "fg:#689d6a"
 
 [c]
 symbol = " "
 format = " [$symbol$version]($style) "
-style = "fg:#3776ab"
+style = "fg:#a8b9cc"
 
 [custom.cpp]
 detect_extensions = ['cpp', 'cc', 'hpp']
@@ -109,6 +83,7 @@ style = "fg:#00599c"
 [rust]
 symbol = ""
 format = ' [$symbol $version]($style) '
+style = "fg:#dea584"
 
 [golang]
 symbol = ""
@@ -129,20 +104,20 @@ style = "fg:#f7a41d"
 [cmake]
 symbol = "△"
 format = " [$symbol $version]($style) "
+style = "fg:#064f8c"
 
 [docker_context]
 symbol = ""
 format = ' [$symbol $context]($style) '
+style = "fg:#384d54"
 
 [package]
 symbol = '󰏗 '
+style = "fg:#ff8833"
 
 [lua]
 symbol = ' '
-
-[dotnet]
-format = ' [$symbol$version]($style) '
-style = "fg:#68217a"
+style = "fg:#00007c"
 
 [time]
 disabled = true
@@ -155,9 +130,26 @@ disabled = true
 
 [character]
 disabled = false
-success_symbol = '[𝘹](bold fg:green)'
-error_symbol = '[𝘹](bold fg:red)'
-vimcmd_symbol = '[](bold fg:creen)'
-vimcmd_replace_one_symbol = '[](bold fg:purple)'
-vimcmd_replace_symbol = '[](bold fg:purple)'
-vimcmd_visual_symbol = '[](bold fg:lavender)'
+success_symbol = '[❯](bold fg:#a9dc76)'
+error_symbol = '[❯](bold fg:#ff6188)'
+vimcmd_symbol = '[❮](bold fg:#78dce8)'
+vimcmd_replace_one_symbol = '[❮](bold fg:#ab9df2)'
+vimcmd_replace_symbol = '[❮](bold fg:#ab9df2)'
+vimcmd_visual_symbol = '[❮](bold fg:#ffd866)'
+
+[palettes.melange]
+base     = "#292522"
+mantle   = "#34302C"
+text     = "#ece1d7"
+subtext0 = "#867462"
+surface  = "#403a36"
+overlay  = "#34302c"
+red      = "#BD8183"
+green    = "#78997A"
+yellow   = "#E49B5D"
+blue     = "#7F91B2"
+mauve    = "#B380B0"
+teal     = "#7B9695"
+peach    = "#D47766"
+foam     = "#89B3B6"
+gold     = "#EBC06D"

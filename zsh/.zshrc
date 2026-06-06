@@ -24,15 +24,24 @@ source $ZSH/oh-my-zsh.sh
 # Import settings for work (paths etc) 
 [ -f "$HOME/.config/zsh/work.zsh" ] && source "$HOME/.config/zsh/work.zsh"
 
-# Import custom settings (themes, configs for fzf)
+# Import custom settings
 [ -f "$HOME/.config/zsh/custom.zsh" ] && source "$HOME/.config/zsh/custom.zsh"
 
+# Import theme settings for cli stuff (w/iris)
+[ -f "$HOME/.config/zsh/themes.zsh" ] && source "$HOME/.config/zsh/themes.zsh"
 
-# Load Angular CLI autocompletion.
-source <(ng completion script)
+# --- Iris FZF Sync ---
+autoload -Uz add-zsh-hook
+_iris_fzf_sync() {
+    local cache_file="$HOME/.cache/iris/fzf.sh"
+    if [[ -f "$cache_file" ]]; then
+        local mt=$(stat -f %m "$cache_file" 2>/dev/null || stat -c %Y "$cache_file" 2>/dev/null)
+        if [[ "$mt" != "$LAST_IRIS_SYNC" ]]; then
+            source "$cache_file"
+            export LAST_IRIS_SYNC="$mt"
+        fi
+    fi
+}
+add-zsh-hook precmd _iris_fzf_sync
+# ---------------------
 
-# Starship config
-export STARSHIP_CONFIG=~/.config/starship/starship.toml
-
-# Starship configuration
-eval "$(starship init zsh)"

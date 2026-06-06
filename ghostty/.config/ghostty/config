@@ -1,4 +1,4 @@
-config-file = themes/vesper
+config-file = current_theme.conf
 # background-opacity = 0.9
 
 font-family = JetBrainsMonoNL Nerd Font
@@ -58,4 +58,3 @@ keybind = super+b>j=goto_split:bottom
 keybind = super+b>k=goto_split:top
 keybind = super+b>l=goto_split:right
 keybind = super+b>z=toggle_split_zoom
-

@@ -8,3 +8,6 @@ tmux/.config/tmux/resurrect/
 yazi/.config/yazi/plugins/
 yazi/.config/yazi/package.toml
 
+current_theme.*
+bat/.config/bat/themes
+btop/.config/btop/themes

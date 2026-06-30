@@ -23,3 +23,6 @@ alias g++="g++ -std=c++17"
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(starship init zsh)"
+
+# Enabling Iris
+eval "$(iris init)"

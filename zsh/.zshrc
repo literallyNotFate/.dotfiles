@@ -30,18 +30,3 @@ source $ZSH/oh-my-zsh.sh
 # Import theme settings for cli stuff (w/iris)
 [ -f "$HOME/.config/zsh/themes.zsh" ] && source "$HOME/.config/zsh/themes.zsh"
 
-# --- Iris FZF Sync ---
-autoload -Uz add-zsh-hook
-_iris_fzf_sync() {
-    local cache_file="$HOME/.cache/iris/fzf.sh"
-    if [[ -f "$cache_file" ]]; then
-        local mt=$(stat -f %m "$cache_file" 2>/dev/null || stat -c %Y "$cache_file" 2>/dev/null)
-        if [[ "$mt" != "$LAST_IRIS_SYNC" ]]; then
-            source "$cache_file"
-            export LAST_IRIS_SYNC="$mt"
-        fi
-    fi
-}
-add-zsh-hook precmd _iris_fzf_sync
-# ---------------------
-
